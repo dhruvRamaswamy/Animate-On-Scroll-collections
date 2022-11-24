@@ -14,7 +14,7 @@ body h1 {
   text-align: center;
 }
 
-#container-boxes {
+.container-boxes {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@ body h1 {
   margin-bottom: 20px;
   overflow-x: hidden;
 }
-#container-boxes .box {
+.container-boxes .box {
   display: flex;
   align-items: center;
   background-color: steelblue;
@@ -34,13 +34,14 @@ body h1 {
   width: 400px;
   height: 200px;
   transform: translateX(-400%);
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease-out;
+  text-align: center;
   /* Interesting selector, right? */
 }
-#container-boxes .box:nth-of-type(even) {
+.container-boxes .box:nth-of-type(even) {
   transform: translateX(400%);
 }
-#container-boxes .box.show {
+.container-boxes .box.show {
   transform: translateX(0);
 }
 
